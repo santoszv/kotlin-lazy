@@ -39,6 +39,10 @@ class UnsafeClearableLazyImpl<out T>(private val initializer: () -> T) : Clearab
         _value = UNINITIALIZED
     }
 
+    override fun toString(): String {
+        return if (isInitialized()) value.toString() else "Lazy value not initialized yet."
+    }
+
     companion object {
 
         private object UNINITIALIZED

@@ -22,7 +22,7 @@ package mx.com.inftel.kotlinx.lazy
 interface ClearableLazy<out T> : Lazy<T> {
 
     /**
-     * Gets the lazily initialized value of the current Lazy instance.
+     * Gets the lazily initialized value of the current ClearableLazy instance.
      * Once the value was initialized it must not change during the rest of lifetime of this ClearableLazy instance,
      * unless is cleared. After a clear, the value will be initialized again.
      */
